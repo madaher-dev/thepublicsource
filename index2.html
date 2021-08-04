@@ -75,25 +75,22 @@ A Special Issue by The Public Source"
       src="http://code.jquery.com/jquery-1.4.2.min.js"
     ></script>
 
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#video').bind('ended', function () {
-          location.href = 'minerva.html';
-        });
-      });
-    </script>
-
-    <video id="video" height="100%" width="100%" autoplay controls muted>
-      <source src="aug4.webm" type="video/webm" />
-      Sorry, your browser doesn't support embedded videos.
-    </video>
-
     <script>
       function redirect() {
-        document.location = 'minerva.html';
+        document.location.href = 'minerva.html';
       }
     </script>
-    <video src="aug4.webm" onended="redirect()">
+    <video
+      id="video"
+      src="aug4.webm"
+      type="video/webm"
+      height="100%"
+      width="100%"
+      autoplay
+      controls
+      muted
+      onended="redirect()"
+    >
       Sorry, your browser doesn't support embedded videos.
     </video>
   </body>
